@@ -5,7 +5,7 @@ class Piece {
     }
 
     spawn() {
-        this.typeId = this.randomizeTetrominoType(COLORS.length - 1);
+        this.typeId = this.randomizeTetrominoType(COLORS.length);
         this.shape = SHAPES[this.typeId];
         this.color = COLORS[this.typeId];
 
@@ -35,6 +35,6 @@ class Piece {
     }
 
     randomizeTetrominoType(noOfTypes) {
-        return Math.floor(Math.random() * noOfTypes + 1);
+        return Math.floor(Math.random() * noOfTypes);
     }
 }
